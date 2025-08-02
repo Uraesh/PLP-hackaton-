@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEBON Sitou Daniel - Développeur d'Applications Frontend | Portfolio Professionnel</title>
+    <meta name="description" content="Portfolio de FEBON Sitou Daniel, développeur d'applications spécialiste frontend passionné par l'innovation technologique. Étudiant ESGIS Togo, expert en HTML5, CSS3, JavaScript, Tailwind CSS et IA génératives.">
+    <meta name="author" content="FEBON Sitou Daniel">
+    <meta name="keywords" content="développeur frontend, portfolio, développement web, HTML5, CSS3, JavaScript, Tailwind CSS, React, innovation technologique, Lomé Togo, ESGIS, IA génératives">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="FR">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://febon-daniel-portfolio.netlify.app/">
+    <meta property="og:title" content="FEBON Sitou Daniel - Développeur d'Applications Frontend">
+    <meta property="og:description" content="Portfolio professionnel de FEBON Sitou Daniel, développeur frontend passionné par l'innovation technologique et la création d'interfaces web modernes.">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://febon-daniel-portfolio.netlify.app/">
+    <meta name="twitter:title" content="FEBON Sitou Daniel - Développeur d'Applications Frontend">
+    <meta name="twitter:description" content="Portfolio professionnel de FEBON Sitou Daniel, développeur frontend passionné par l'innovation technologique.">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "FEBON Sitou Daniel",
+      "jobTitle": "Développeur d'Applications Spécialiste Frontend",
+      "description": "Développeur frontend passionné par l'innovation technologique et la création d'interfaces web modernes",
+      "url": "https://febon-daniel-portfolio.netlify.app/",
+      "sameAs": [
+        "https://github.com/Uraesh"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lomé",
+        "addressCountry": "TG"
+      },
+      "telephone": "+228702042289",
+      "email": "febon.s.daniel01@gmail.com",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "ESGIS Togo"
+      },
+      "knowsAbout": [
+        "HTML5",
+        "CSS3", 
+        "JavaScript",
+        "Tailwind CSS",
+        "MySQL",
+        "Intelligence Artificielle Générative"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset et Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Couleurs principales */
+            --color-dark: #0a0a0a;
+            --color-gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --color-gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --color-gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --color-text-primary: #ffffff;
+            --color-text-secondary: #b0b0b0;
+            --color-glass: rgba(255, 255, 255, 0.1);
+            --color-glass-border: rgba(255, 255, 255, 0.2);
+            
+            /* Typographie */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-code: 'JetBrains Mono', 'Courier New', monospace;
+            
+            /* Espacements */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-2xl: 4rem;
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease-out;
+            --transition-normal: 0.3s ease-out;
+            --transition-slow: 0.5s ease-out;
+            
+            /* Ombres */
+            --shadow-glass: 0 8px 32px rgba(31, 38, 135, 0.37);
+            --shadow-glow: 0 0 40px rgba(102, 126, 234, 0.4);
+            --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: var(--color-dark);
+            color: var(--color-text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Arrière-plan animé */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(240, 147, 251, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(79, 172, 254, 0.2) 0%, transparent 50%);
+            animation: backgroundShift 20s ease-in-out infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes backgroundShift {
+            0% {
+                transform: translateX(-10px) translateY(-10px);
+            }
+            100% {
+                transform: translateX(10px) translateY(10px);
+            }
+        }
+
+        /* Scrollbar personnalisée */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--color-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-gradient-1);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-gradient-2);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--color-glass-border);
+            z-index: 1000;
+            padding: var(--spacing-sm) 0;
+            transition: all var(--transition-normal);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            font-weight: 800;
+            background: var(--color-gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-item a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all var(--transition-fast);
+            position: relative;
+        }
+
+        .nav-item a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-gradient-1);
+            transition: width var(--transition-normal);
+        }
+
+        .nav-item a:hover {
+            color: var(--color-text-primary);
+        }
+
+        .nav-item a:hover::after {
+            width: 100%;
+        }
+
+        /* Sections communes */
+        .section {
+            padding: var(--spacing-2xl) var(--spacing-md);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            background: var(--color-gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            margin-bottom: var(--spacing-md);
+            background: var(--color-gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-xl);
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: var(--spacing-md) var(--spacing-xl);
+            background: var(--color-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--color-glass-border);
+            border-radius: 50px;
+            color: var(--color-text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left var(--transition-slow);
+        }
+
+        .hero-cta:hover::before {
+            left: 100%;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Glass Cards */
+        .glass-card {
+            background: var(--color-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--color-glass-border);
+            border-radius: 20px;
+            padding: var(--spacing-lg);
+            transition: all var(--transition-normal);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* À propos */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--color-gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin: 0 auto;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-text-secondary);
+        }
+
+        /* Compétences */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .skill-category h3 {
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--color-gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-xs);
+        }
+
+        .skill-tag {
+            padding: var(--spacing-xs) var(--spacing-sm);
+            background: var(--color-glass);
+            border: 1px solid var(--color-glass-border);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--color-text-primary);
+            transition: all var(--transition-fast);
+        }
+
+        .skill-tag:hover {
+            background: var(--color-gradient-3);
+            transform: scale(1.05);
+        }
+
+        /* Formation Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--color-gradient-1);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: var(--spacing-lg);
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background: var(--color-gradient-2);
+            border-radius: 50%;
+            top: 30px;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: var(--color-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--color-glass-border);
+            border-radius: 15px;
+            padding: var(--spacing-lg);
+            position: relative;
+        }
+
+        .timeline-date {
+            color: var(--color-gradient-1);
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .cv-button {
+            display: inline-block;
+            margin-top: var(--spacing-md);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background: var(--color-gradient-2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all var(--transition-normal);
+        }
+
+        .cv-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Projets */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .project-card {
+            background: var(--color-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--color-glass-border);
+            border-radius: 20px;
+            padding: var(--spacing-lg);
+            transition: all var(--transition-normal);
+            transform-style: preserve-3d;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            background: var(--color-gradient-3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-xs);
+            margin-top: var(--spacing-md);
+        }
+
+        .tech-tag {
+            padding: 4px var(--spacing-sm);
+            background: var(--color-gradient-1);
+            color: white;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: var(--spacing-md);
+            color: var(--color-text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-fast);
+        }
+
+        .project-link:hover {
+            background: var(--color-gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--color-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--color-glass-border);
+            border-radius: 20px;
+            padding: var(--spacing-xl);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: var(--spacing-md);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--color-glass-border);
+            border-radius: 10px;
+            color: var(--color-text-primary);
+            font-family: var(--font-primary);
+            transition: all var(--transition-fast);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: rgba(102, 126, 234, 0.8);
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--color-text-secondary);
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: var(--spacing-md);
+            background: var(--color-gradient-1);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left var(--transition-slow);
+        }
+
+        .submit-button:hover::before {
+            left: 100%;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                gap: var(--spacing-md);
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: var(--spacing-lg);
+            }
+            
+            .timeline::after {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+            
+            .timeline-item::after {
+                left: 10px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 10, 0.95);
+                backdrop-filter: blur(20px);
+                padding: var(--spacing-md);
+                border-top: 1px solid var(--color-glass-border);
+                display: none;
+            }
+
+            .section {
+                padding: var(--spacing-xl) var(--spacing-sm);
+                min-height: auto;
+            }
+
+            .hero {
+                height: 100vh;
+                padding: 0 var(--spacing-sm);
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .avatar {
+                width: 150px;
+                height: 150px;
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --spacing-sm: 0.75rem;
+                --spacing-md: 1rem;
+                --spacing-lg: 1.5rem;
+                --spacing-xl: 2rem;
+                --spacing-2xl: 2.5rem;
+            }
+            
+            .contact-form {
+                padding: var(--spacing-lg);
+            }
+        }
+
+        /* Animation d'entrée */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .fade-in:nth-child(2) { animation-delay: 0.1s; }
+        .fade-in:nth-child(3) { animation-delay: 0.2s; }
+        .fade-in:nth-child(4) { animation-delay: 0.3s; }
+        .fade-in:nth-child(5) { animation-delay: 0.4s; }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="nav-container">
+            <a href="#accueil" class="logo" aria-label="Retour à l'accueil">FSD</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#accueil">Accueil</a></li>
+                <li class="nav-item"><a href="#apropos">À propos</a></li>
+                <li class="nav-item"><a href="#competences">Compétences</a></li>
+                <li class="nav-item"><a href="#formation">Formation</a></li>
+                <li class="nav-item"><a href="#projets">Projets</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero" role="banner">
+        <div class="hero-content">
+            <h1 class="hero-title">FEBON Sitou Daniel</h1>
+            <p class="hero-subtitle">Développeur d'Applications Spécialiste Frontend<br>Passionné par l'innovation technologique</p>
+            <a href="#apropos" class="hero-cta" aria-label="Découvrir mon profil">Découvrir mon profil</a>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="apropos" class="section" role="main">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="avatar-container">
+                    <div class="avatar" aria-label="Avatar de FEBON Sitou Daniel">FSD</div>
+                </div>
+                <div class="about-text">
+                    <p>Bonjour ! Je suis <strong>FEBON Sitou Daniel</strong>, étudiant en deuxième année de développement d'applications à ESGIS Togo, passionné par la création d'interfaces web modernes et la résolution de problèmes.</p>
+                    
+                    <p>J'ai une expérience pratique dans la réalisation de projets de A à Z, en utilisant des outils actuels comme Tailwind CSS et les IA génératives pour accélérer le développement. Je suis motivé à collaborer, prototyper rapidement et construire des solutions innovantes.</p>
+                    
+                    <p>Basé à <strong>Lomé, Togo</strong>, je combine créativité technique et passion pour l'innovation pour créer des expériences web exceptionnelles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences" class="section">
+        <div class="container">
+            <h2 class="section-title">Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="glass-card skill-category fade-in">
+                    <h3>Langages de Programmation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                
+                <div class="glass-card skill-category fade-in">
+                    <h3>Frameworks & Librairies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Bootstrap</span>
+                    </div>
+                </div>
+                
+                <div class="glass-card skill-category fade-in">
+                    <h3>Outils de Développement</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Canva AI</span>
+                        <span class="skill-tag">Figma</span>
+                    </div>
+                </div>
+                
+                <div class="glass-card skill-category fade-in">
+                    <h3>IA Génératives</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ChatGPT</span>
+                        <span class="skill-tag">Claude AI</span>
+                        <span class="skill-tag">Assistance au Code</span>
+                        <span class="skill-tag">Génération d'Idées</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formation -->
+    <section id="formation" class="section">
+        <div class="container">
+            <h2 class="section-title">Formation & Parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - 2025</div>
+                        <h3>Licence en Développement d'Applications</h3>
+                        <p><strong>ESGIS Togo</strong></p>
+                        <p>Deuxième année en cours - Spécialisation Frontend</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - 2024</div>
+                        <h3>Première Année Validée</h3>
+                        <p><strong>ESGIS Togo</strong></p>
+                        <p>Première année validée avec succès, sans rattrapage</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023</div>
+                        <h3>Baccalauréat Scientifique</h3>
+                        <p><strong>Lycée Agoè Nyvé</strong></p>
+                        <p>Diplôme obtenu avec mention</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023</div>
+                        <h3>Certifications Coursera</h3>
+                        <p><strong>Spécialisation IA Générative</strong></p>
+                        <ul>
+                            <li>Introduction to Generative AI</li>
+                            <li>Introduction to Large Language Models</li>
+                            <li>Introduction to Responsible AI</li>
+                            <li>Introduction to Image Generation</li>
+                        </ul>
+                        <a href="#" class="cv-button" download="CV_FEBON_Sitou_Daniel.pdf" aria-label="Télécharger mon CV">📄 Télécharger mon CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets" class="section">
+        <div class="container">
+            <h2 class="section-title">Projets Réalisés</h2>
+            <div class="projects-grid">
+                <article class="project-card fade-in">
+                    <h3 class="project-title">Hinata Memorial</h3>
+                    <p>Conception et développement d'un site web commémoratif pour célébrer le 20ème anniversaire. Création d'une expérience numérique personnelle et mémorable avec un design responsive et une interface utilisateur soignée.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                    <a href="#" class="project-link" aria-label="Voir le projet Hinata Memorial">Voir le projet →</a>
+                </article>
+                
+                <article class="project-card fade-in">
+                    <h3 class="project-title">Charlotte's Golden Echoes</h3>
+                    <p>Développement d'un site web commémoratif élégant mettant en valeur les souvenirs et moments précieux. Interface utilisateur moderne avec animations subtiles et navigation intuitive.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Animation CSS</span>
+                    </div>
+                    <a href="#" class="project-link" aria-label="Voir le projet Charlotte's Golden Echoes">Voir le projet →</a>
+                </article>
+                
+                <article class="project-card fade-in">
+                    <h3 class="project-title">Portfolio Interactif</h3>
+                    <p>Création de ce portfolio personnel avec des technologies modernes, animations CSS avancées et design glassmorphism. Optimisé pour les performances et l'accessibilité.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Glassmorphism</span>
+                        <span class="tech-tag">SEO</span>
+                    </div>
+                    <a href="#" class="project-link" aria-label="Voir le code source">Code source →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contactez-moi</h2>
+            <form class="contact-form" action="#" method="POST" role="form" aria-label="Formulaire de contact">
+                <div class="form-group">
+                    <label for="nom" class="form-label">Nom complet</label>
+                    <input type="text" id="nom" name="nom" class="form-input" placeholder="Votre nom complet" required aria-describedby="nom-help">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Adresse email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="votre.email@exemple.com" required aria-describedby="email-help">
+                </div>
+                
+                <div class="form-group">
+                    <label for="sujet" class="form-label">Sujet</label>
+                    <input type="text" id="sujet" name="sujet" class="form-input" placeholder="Objet de votre message" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Votre message..." required aria-describedby="message-help"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button" aria-label="Envoyer le message">Envoyer le message</button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 2rem; color: var(--color-text-secondary);">
+                <p>📧 febon.s.daniel01@gmail.com</p>
+                <p>📱 +228 70 20 42 89</p>
+                <p>📍 Lomé, Togo</p>
+                <p>🔗 <a href="https://github.com/Uraesh" style="color: var(--color-text-primary);" aria-label="Visiter mon profil GitHub">GitHub: Uraesh</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--color-glass); backdrop-filter: blur(20px); border-top: 1px solid var(--color-glass-border); padding: var(--spacing-lg); text-align: center; color: var(--color-text-secondary);" role="contentinfo">
+        <p>&copy; 2025 FEBON Sitou Daniel. Tous droits réservés.</p>
+        <p>Développé avec passion pour le hackathon PLP Academy 🚀</p>
+    </footer>
+</body>
+</html>
