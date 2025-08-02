@@ -385,10 +385,6 @@
             color: var(--color-text-secondary);
         }
 
-        .about-text p,
-        .project-card > p {
-            text-align: justify;
-        }
 
         /* Compétences */
         .skills-grid {
@@ -920,15 +916,6 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date">2023</div>
-                        <h3>Baccalauréat Scientifique</h3>
-                        <p><strong>Lycée Agoè Nyvé</strong></p>
-                        <p>Diplôme obtenu avec mention</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023</div>
                         <h3>Certifications Coursera</h3>
                         <p><strong>Spécialisation IA Générative</strong></p>
                         <ul>
@@ -938,6 +925,15 @@
                             <li>Introduction to Image Generation</li>
                         </ul>
                         <a href="#" class="cv-button" download="CV_FEBON_Sitou_Daniel.pdf" aria-label="Télécharger mon CV">📄 Télécharger mon CV</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023</div>
+                        <h3>Baccalauréat Scientifique</h3>
+                        <p><strong>Lycée Agoè Nyvé</strong></p>
+                        <p>Diplôme obtenu avec mention</p>
                     </div>
                 </div>
             </div>
@@ -994,7 +990,7 @@
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Contactez-moi</h2>
-            <form class="contact-form" action="#" method="POST" role="form" aria-label="Formulaire de contact">
+            <form class="contact-form" action="mailto:febon.s.daniel01@gmail.com" method="POST" enctype="text/plain" role="form" aria-label="Formulaire de contact">
                 <div class="form-group">
                     <label for="nom" class="form-label">Nom complet</label>
                     <input type="text" id="nom" name="nom" class="form-input" placeholder="Votre nom complet" required aria-describedby="nom-help">
