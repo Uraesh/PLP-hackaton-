@@ -1,12 +1,12 @@
 # Portfolio de FEBON Sitou Daniel - Développeur Frontend
 
-Ce projet est le code source du portfolio personnel de **FEBON Sitou Daniel**, un développeur d'applications spécialisé frontend passionné par l'innovation technologique. Ce site a été développé avec soin dans le cadre du **hackathon de la PLP Academy**.
+Ce projet est le code source du portfolio personnel de **FEBON Sitou Daniel**, un développeur d'applications spécialisé frontend passionné par l'innovation technologique avec l'intelligence artificielle. Ce site a été développé avec soin dans le cadre du **hackathon de la PLP Academy**.
 
 ## ✨ Aperçu
 
 Le portfolio est une page web single-page moderne et interactive, conçue pour présenter le profil, les compétences, la formation et les projets de FEBON Sitou Daniel. Le design utilise des effets de "glassmorphism" et des animations fluides pour une expérience utilisateur engageante.
 
-Vous pouvez visiter le site ici : [Lien vers le portfolio](https://febon-daniel-portfolio.netlify.app/) (Note: le lien est extrait des métadonnées, il se peut qu'il ne soit pas encore déployé).
+Vous pouvez visiter le site ici :  [.](https://uraesh.github.io/PLP-hackaton-/)
 
 ## 🚀 Sections du Portfolio
 
@@ -24,8 +24,7 @@ Le site est structuré en plusieurs sections clés :
 Ce projet a été construit en utilisant un ensemble de technologies web modernes :
 
 *   **HTML5** : Pour la structure sémantique du contenu.
-*   **CSS3** : Pour le style, le design responsive, les animations et l'effet de glassmorphism.
-*   **JavaScript** : Pour l'interactivité et les futures fonctionnalités dynamiques.
+*   **CSS3** : Pour le style, le design responsive, les animations et l'effet de glassmorphisme.
 *   **Google Fonts** : Pour une typographie élégante (`Inter` et `JetBrains Mono`).
 *   **SEO** : Optimisation pour les moteurs de recherche avec des balises meta et des données structurées (Schema.org).
 
